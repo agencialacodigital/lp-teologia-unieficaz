@@ -307,6 +307,19 @@
     margin-top:6px;
     flex-shrink:0;
   }
+  .trilha-price-note{
+    font-size:11.5px;
+    font-weight:600;
+    color:var(--ink-soft);
+    margin-top:6px;
+  }
+  .trilha-price-disclaimer{
+    font-size:11px;
+    font-weight:500;
+    color:var(--ink-soft);
+    margin-top:4px;
+    line-height:1.45;
+  }
   .trilha-card p.desc{font-size:14.5px;color:var(--ink-soft);flex-grow:1;}
   .trilha-card p.desc strong{color:var(--purple);}
 
@@ -670,7 +683,8 @@
     letter-spacing:0.04em;
     margin-bottom:7px;
   }
-  .form-group input{
+  .form-group input,
+  .form-group select{
     width:100%;
     padding:14px 16px;
     border-radius:12px;
@@ -681,11 +695,23 @@
     color:var(--ink);
     transition:border-color .2s ease, background .2s ease;
   }
-  .form-group input:focus{
+  .form-group input:focus,
+  .form-group select:focus{
     outline:none;
     border-color:var(--teal);
     background:var(--white);
   }
+  .form-group select{
+    appearance:none;
+    -webkit-appearance:none;
+    cursor:pointer;
+    padding-right:40px;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23482683'%3E%3Cpath d='M5.25 7.5l4.75 5 4.75-5z'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;
+    background-position:right 14px center;
+    background-size:16px;
+  }
+  .form-group select:invalid{color:var(--ink-soft);}
   .modal-box form .btn-primary{
     width:100%;
     margin-top:6px;
@@ -799,6 +825,14 @@
         <div class="trilha-meta">
           <div class="trilha-meta-item"><span class="dot"></span>Duração: 6 Semestres (3 anos).</div>
           <div class="trilha-meta-item"><span class="dot"></span>Carga Horária: Até 3.540 horas.</div>
+          <div class="trilha-meta-item">
+            <span class="dot"></span>
+            <div>
+              Investimento: 1ª mensalidade por <strong>R$ 219,16</strong>, demais por R$ 383,53 com desconto de pontualidade · 36 parcelas
+              <div class="trilha-price-note">Valor regular da mensalidade: R$ 547,90.</div>
+              <div class="trilha-price-disclaimer">Primeira mensalidade com 60% de desconto para indicações de igrejas parceiras ou do Pastor Rodrigo.</div>
+            </div>
+          </div>
         </div>
         <p class="desc"><strong>Para quem é:</strong> Indicado para quem busca uma formação teológica profunda, deseja atuar na liderança eclesiástica principal, pesquisa acadêmica, docência ou capelania institucional. Inclui Trabalho de Conclusão de Curso (TCC) e Estágio Supervisionado.</p>
       </div>
@@ -810,6 +844,14 @@
         <div class="trilha-meta">
           <div class="trilha-meta-item"><span class="dot"></span>Duração: 4 Semestres (2 anos).</div>
           <div class="trilha-meta-item"><span class="dot"></span>Carga Horária: Até 2000  horas.</div>
+          <div class="trilha-meta-item">
+            <span class="dot"></span>
+            <div>
+              Investimento: 1ª mensalidade por <strong>R$ 219,16</strong>, demais por R$ 383,53 com desconto de pontualidade · 24 parcelas
+              <div class="trilha-price-note">Valor regular da mensalidade: R$ 547,90.</div>
+              <div class="trilha-price-disclaimer">Primeira mensalidade com 60% de desconto para indicações de igrejas parceiras ou do Pastor Rodrigo.</div>
+            </div>
+          </div>
         </div>
         <p class="desc"><strong>Para quem é:</strong> Ideal para quem quer um diploma de ensino superior com foco altamente prático e rápido voltado para o campo missionário, contextualização cultural e plantação de igrejas locais.</p>
       </div>
@@ -820,6 +862,14 @@
         <div class="trilha-meta">
           <div class="trilha-meta-item"><span class="dot"></span>Duração: Apenas 3 Semestres (1 ano e meio).</div>
           <div class="trilha-meta-item"><span class="dot"></span>Carga Horária: Até 2.400 horas.</div>
+          <div class="trilha-meta-item">
+            <span class="dot"></span>
+            <div>
+              Investimento: 1ª mensalidade por <strong>R$ 219,16</strong>, demais por R$ 383,53 com desconto de pontualidade · 20 parcelas
+              <div class="trilha-price-note">Valor regular da mensalidade: R$ 547,90.</div>
+              <div class="trilha-price-disclaimer">Primeira mensalidade com 60% de desconto para indicações de igrejas parceiras ou do Pastor Rodrigo.</div>
+            </div>
+          </div>
         </div>
         <p class="desc"><strong>Para quem é:</strong> Criado especialmente para pastores, líderes e obreiros que já concluíram cursos de "Teologia Livre" em suas comunidades ou igrejas e desejam validar e acelerar sua formação com um diploma focado em prática e liderança ministerial ativa.</p>
       </div>
@@ -1094,6 +1144,15 @@
         <label for="inputTelefone">Telefone / WhatsApp</label>
         <input type="tel" id="inputTelefone" name="telefone" placeholder="(00) 00000-0000" autocomplete="tel" inputmode="numeric" maxlength="15" required>
       </div>
+      <div class="form-group">
+        <label for="inputModalidade">Modalidade de interesse</label>
+        <select id="inputModalidade" name="modalidade" required>
+          <option value="" disabled selected>Selecione a modalidade</option>
+          <option value="1 - Bacharelado em Teologia (Graduação Superior)">1 – Bacharelado em Teologia (Graduação Superior)</option>
+          <option value="2 - Tecnólogo em Teologia (Graduação Superior Focada)">2 – Tecnólogo em Teologia (Graduação Superior Focada)</option>
+          <option value="3 - Formação de Pastores (Aproveitamento de Teologia Livre)">3 – Formação de Pastores (Aproveitamento de Teologia Livre)</option>
+        </select>
+      </div>
       <button type="submit" class="btn btn-primary">Quero me inscrever</button>
     </form>
     <p class="modal-privacy">Seus dados estão seguros e serão usados apenas para contato sobre sua matrícula.</p>
@@ -1185,8 +1244,9 @@
       var nome = document.getElementById('inputNome').value.trim();
       var email = document.getElementById('inputEmail').value.trim();
       var telefone = phoneInput.value.trim();
+      var modalidade = document.getElementById('inputModalidade').value;
 
-      if(!nome || !email || telefone.replace(/\D/g,'').length < 10){
+      if(!nome || !email || telefone.replace(/\D/g,'').length < 10 || !modalidade){
         form.reportValidity();
         return;
       }
@@ -1194,7 +1254,8 @@
       var url = CHECKOUT_URL
         + "?nome=" + encodeURIComponent(nome)
         + "&email=" + encodeURIComponent(email)
-        + "&telefone=" + encodeURIComponent(telefone);
+        + "&telefone=" + encodeURIComponent(telefone)
+        + "&modalidade=" + encodeURIComponent(modalidade);
       window.location.href = url;
     });
   })();
